@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie - Houndé</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Styles généraux */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: #f9fbe7; /* beige/vert très doux */
+      color: #2e7d32; /* vert nature */
+      line-height: 1.6;
+    }
+
+    /* En-tête */
+    header {
+      background-color: #4caf50; /* vert doux harmonisé */
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+      margin-right: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    /* Conteneur principal de la galerie */
+    .photo-album {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 50px;
+      max-width: 1300px;
+      margin: 40px auto;
+    }
+
+    .photo-album img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+      cursor: pointer;
+    }
+
+    .photo-album img:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Pied de page */
+    footer {
+      background-color: #4caf50; /* même vert que l'en-tête */
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    footer a {
+      color: #dcedc8;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+      }
+
+      header .logo {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      .photo-album {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .photo-album img {
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      .photo-album {
+        padding: 15px;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Logo de Houndé" class="logo" />
+    <h1>Galerie de Houndé</h1>
+  </header>
+
+  <main>
+    <div class="photo-album">
+      <img src="images/Barrage.jpg" alt="Barrage de Houndé">
+      <img src="images/Foret sacrée.jpg" alt="Forêt sacrée">
+      <img src="images/Forge.jpg" alt="Forge traditionnelle">
+      <img src="images/Four à chaux.jpg" alt="Four à chaux">
+      <img src="images/Hotel de ville.jpg" alt="Hôtel de ville">
+      <img src="images/Marché central.jpg" alt="Marché central">
+      <img src="images/Masques en fibre.jpg" alt="Masques en fibre">
+      <img src="images/masquesenfeuille.jpg" alt="Masques en feuille">
+      <img src="images/Metallurgie de fer.jpg" alt="Métallurgie de fer">
+      <img src="images/Mine d'or.jpg" alt="Mine d'or">
+      <img src="images/usine.jpg" alt="Usine d’égrenage de coton">
+      <img src="images/pop.jpg" alt="Paysage de Houndé">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ville de Houndé – Tous droits réservés</p>
+    <p>Contact : <a href="mailto:info@houndetourisme.bf">info@houndetourisme.bf</a></p>
+  </footer>
+
+</body>
+</html>
